@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>스프레드연산자, 전개연산자</title>
+    <script>
+      const data = [
+        { id: 1, name: "홍민아" },
+        { id: 2, name: "강호동" },
+        { id: 3, name: "김수지" },
+        { id: 4, name: "김을동" },
+        { id: 5, name: "박수형" },
+      ];
+      const data1 = data.concat();
+      const data2 = data.concat({ id: 6, name: "최우식" });
+      const data3 = [...data];
+      const data4 = [...data2, { id: 7, name: "김다미" }];
+      console.log(data3);
+      console.log(data4);
+      console.log("\n");
+
+      //갱신
+      const data5 = data.map((item) => {
+        if (item.id === 1) {
+          return {
+              ...item,
+              name: '김다미'
+          }
+        } else {
+          return item;
+        }
+      });
+      
+      const data6 = data.map(item => item.id ===2 ? {...item, name: '남주혁'} : item)
+      console.log(data6);
+    </script>
+  </head>
+  <body>
+    <pre></pre>
+  </body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>필터</title>
+    <script>
+      const arr1 = ['수박', '옥수수', '과자', '딸기', '우유', '고기', '수수']
+      const txt = '수'
+      //filter + indexOf 수 결과
+      const result = arr1.includes(txt)
+      console.log(result)
+      const map1 = arr1.map(item => item.includes(txt))
+      console.log(map1)
+
+      const re1 = arr1.filter( item => item.indexOf(txt) > -1 )
+      console.log(re1)
+      const re2 = arr1.filter( item => item.indexOf(txt) != -1 )
+      console.log(re2)
+
+      const data = [
+          {text: '친구와 영화보기'},
+          {text: '엄마와 저녁먹기'},
+          {text: '유튜브 보기'},
+          {text: '가족과 여행가기'},
+          {text: '가족과 영화관람'},
+      ]
+      const txt1 = '영화'
+      const re3 = data.filter(item => item.text.indexOf(txt1) != -1)
+      console.log(re3)
+
+    </script>
+  </head>
+  <body>
+    <pre>
+        
+    </pre>
+  </body>
+</html>

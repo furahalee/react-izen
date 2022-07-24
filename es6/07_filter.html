@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>필터</title>
+    <script>
+      const arr1 = [10, 20, 30, 40, 50];
+      const data = [
+        { id: 1, name: "홍길" },
+        { id: 2, name: "강" },
+        { id: 3, name: "김수" },
+        { id: 4, name: "김을동" },
+        { id: 5, name: "박" },
+      ]
+    //filter는 결과가 배열이다.
+    //배열.filter( 현재값 => 조건 )   --->결과는 배열
+      const arr2 = arr1.filter(item => {
+          return item > 30
+      })
+      console.log(arr2)
+
+      const arr3 = arr1.filter(item => item >=40)
+      console.log(arr3)
+      
+      //30을 제외한 값 출력 : 데이터 삭제 원리
+      const arr4 = arr1.filter(item => item !== 30)
+      console.log(arr4)
+      console.clear()
+      
+      //
+      const arr5 = data.filter(item => item.id === 3)
+      
+      const arr6 = data.filter(item => item.id !== 2)
+      console.log(arr6)
+    </script>
+  </head>
+  <body>
+    <pre>
+        Array.prototype.filter()
+        filter() 메서드는 조건 결과를 새로운 배열로 반환합니다.
+        
+        arr.filter(function(현재값) => {
+            return 조건
+        })
+        arr.filter( 현재값 => 조건 )
+
+        매개변수
+        callback
+        각 요소를 시험할 함수. true를 반환하면 요소를 유지하고, false를 반환하면 버립니다. 다음 세 가지 매개변수를 받습니다.
+        element
+        처리할 현재 요소.
+        index Optional
+        처리할 현재 요소의 인덱스.
+        array Optional
+        filter를 호출한 배열.
+        thisArg Optional
+        callback을 실행할 때 this로 사용하는 값.
+        반환 값
+        테스트를 통과한 요소로 이루어진 새로운 배열. 어떤 요소도 테스트를 통과하지 못했으면 빈 배열을 반환합니다.
+    </pre>
+  </body>
+</html>

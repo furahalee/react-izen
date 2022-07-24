@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>비구조할당</title>
+    <script>
+      let data = {
+          name: '홍길동',
+          age: 20,
+          addr: '서울',
+          tel: '010-0000-1111'
+      }
+      //객체명.키, 객체명['키']
+      console.log(data.name)
+      console.log(data['name'])
+
+      //구조분해, 비구조할당
+      //const {키, 키, 키} = 객체
+      const {name, age, addr, tel} = data
+      console.log(name, age, addr, tel)
+
+      let data1 = {
+          a: 10,
+          b: 30,
+          c: 50
+      }
+      console.log(data1['a'])
+      //구조분해
+      const {a, b, c} = data1
+      console.log(a, b, c)
+    </script>
+  </head>
+  <body>
+    <pre>
+        
+    </pre>
+  </body>
+</html>

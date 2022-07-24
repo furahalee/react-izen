@@ -1,0 +1,37 @@
+//변수 
+$red:red; 
+$green:green; 
+$blue:blue; 
+$pink:pink; 
+
+@mixin make($size) {
+    $width : 120px;
+    
+    @if $size % 2 ==  0 {
+        $width: $width + 50 ;
+    } @else if $size % 3 == 0 {
+        $width: $width - 20 ;
+    } @else {
+        $width: $width
+    }
+    width: $width;
+    height:50px * 2;
+    transition:0.5s;
+    text-align: center;
+    line-height: 50px * 2;
+    font-size: 20px;
+    &:hover {
+        transform:scale(1.2) rotate(45deg)
+    }
+}
+
+.wrap {
+    margin: auto; display: flex; justify-content: space-between;
+    .box {
+        //&:선택자{}
+        &.red { background: $red; @include make(1)}
+        &.green { background: $green; @include make(2)}
+        &.blue { background: $blue; @include make(3)}
+        &.pink { background: $pink; @include make(4)}
+    }
+}

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>맵</title>
+    <script>
+      const arr1 = [10, 20, 30];
+      // arr1.map(function(item, idx) {
+      //     return console.log(item, idx)
+      // })
+      arr1.map((item, idx) => console.log(item));
+      console.clear();
+
+      const data = [
+        { id: 1, name: "홍길" },
+        { id: 2, name: "강" },
+        { id: 3, name: "김수" },
+        { id: 4, name: "김을동" },
+        { id: 5, name: "박" },
+      ];
+      data.map((item, index) => {
+        return console.log(item.id, item.name);
+      });
+      console.log('\n')
+      data.map((item, idx) => console.log(item.name, idx))
+    </script>
+  </head>
+  <body>
+    <pre>
+        구문
+        arr.map(callback(currentValue[, index[, array]])[, thisArg])
+        arr.map(function (변수, 변수) {
+            return 값
+        })
+    -->결과가 1개일때: 일급함수
+        arr.map(function (변수, 변수) {
+            조심: {}을 쓸거면 return을 반드시 써야한다.
+            return 값
+        })
+        arr.map((변수, 변수)=> 값)
+
+        매개변수
+        callback
+        새로운 배열 요소를 생성하는 함수. 다음 세 가지 인수를 가집니다.
+        currentValue
+        처리할 현재 요소.
+        index Optional
+        처리할 현재 요소의 인덱스.
+        array Optional
+        map()을 호출한 배열.
+        thisArg Optional
+        callback을 실행할 때 this로 사용되는 값.
+        반환 값
+        배열의 각 요소에 대해 실행한 callback의 결과를 모은 **새로운 배열**.
+    </pre>
+  </body>
+</html>
